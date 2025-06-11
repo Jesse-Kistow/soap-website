@@ -1,3 +1,8 @@
+/* Global settings */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,12 +10,14 @@ body {
   background-color: #ffffff;
 }
 
+/* Header */
 header {
   background: #cfe9e3;
   padding: 20px;
   text-align: center;
 }
 
+/* Navigation */
 nav {
   text-align: center;
   margin: 20px 0;
@@ -20,13 +27,20 @@ nav a {
   text-decoration: none;
   margin: 0 10px;
   color: #333;
+  font-weight: bold;
 }
 
+nav a:hover {
+  color: #000;
+}
+
+/* Sections */
 section {
   padding: 20px;
   text-align: center;
 }
 
+/* Forms */
 form {
   display: inline-block;
   text-align: left;
@@ -34,7 +48,8 @@ form {
   width: 100%;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -54,6 +69,7 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+/* Buttons */
 button {
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -67,17 +83,22 @@ button:hover {
   background-color: #45a049;
 }
 
+/* Footer */
 footer {
   padding: 20px;
   text-align: center;
   background: #ddd;
 }
 
+/* Images */
 img {
   margin: 10px;
   border-radius: 8px;
+  max-width: 100%;
+  height: auto;
 }
 
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,6 +124,7 @@ img {
   border-radius: 8px;
 }
 
+/* Video Section */
 .livestream-area {
   margin-top: 20px;
 }
@@ -115,4 +137,11 @@ img {
 .livestream-content iframe {
   max-width: 100%;
   border-radius: 10px;
+}
+
+/* Responsive Grid */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
